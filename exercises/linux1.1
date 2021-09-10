@@ -1,0 +1,90 @@
+Excercise 1
+------------
+cd ~/Desctop
+mkdir -p i2gds2021/raw_data
+cd i2gds2021
+mkdir working_data exercises
+mkdir ../I2GDS2021
+
+Excercise 2
+-----------
+touch ./excercises/linux1.1
+
+Excercise 3
+-----------
+vim ./excercises/linux1.1
+
+Excercise 5
+-------------
+Absolute: /Users/semenbondarenko/Desktop/i2gds2021/raw_data
+Relative: ./raw_data
+
+Excercise 6
+------------
+Absolute to home: /Users/semenbondarenko or just "~"
+Relative to home: ../../
+
+Excercise 7
+-----------
+Aug 27 12:19:45 2021
+
+Excercise 8
+-----------
+mkdir testdir
+cp ./raw_data/* ./testdir
+
+Excercise 9
+-----------
+touch testdir/.my_hidden_file
+
+Excercise 10
+-------------
+ls lists only the downloaded files in one row
+ls -lh lists the same files in long human readable format
+ls -lha lists all files in the directory (including the hidden one) in the long human-readable format
+
+Excercise 11
+------------
+rm -r testdir
+
+Excercise 12
+-------------
+head -n 5 yeast.fasta
+>I
+CCACACCACACCCACACACCCACACACCACACCACACACCACACCACACCCACACACACA
+CATCCTAACACTACCCTAACACAGCCCTAATCTAACCCTGGCCAACCTGTCTCTCAACTT
+ACCCTCCATTACCCTGCCTCCACTCGTTACCCTGTCCCATTCAACCATACCACTCCGAAC
+CACCATCCATCCCTCTACTTACTACCACTCACCCACCGTTACCCTCCAATTACCCATATC
+
+
+Excercise 14
+------------
+command used: sed -n 300p raw_data/UnAligSeq14606.txt
+row: CATAATGCCCGCTATAAACCTTATTTTTTATATGGGGGTCTGGCGCTTCGGGAAAAGAGA
+
+Excercise 15
+------------
+I've changed the timestamp by just saving the changes in the file. The new timestamp is Aug 27 12:41.
+
+Excercise 16
+------------
+cat raw_data/UnAligSeq24606.txt raw_data/yeast.fasta > raw_
+data/new.fasta
+
+Excercise 17
+------------
+chmod u=rwx,g=rx,o=r raw_data/new.fasta
+
+Excercise 18
+------------
+mkdir -p testdir/subdir1/subdir2/subdir3/subdir4/subdir5/
+
+Excercise 19
+------------
+home: ~
+desktop: ~/Desktop
+download: ~/Downloads
+I have no Anaconda instalation, so
+  my Python instalation is in: /usr/local/bin/python3
+  my R instalation is in: /usr/local/bin/R
+I can not plug in a USB drive, since I don't have a USB-port in my laptop, but the standard mount locaion is in /Volumes/

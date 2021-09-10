@@ -1,0 +1,34 @@
+1. cd ~/Desctop/i2gds2021
+2. touch exercises/linux1.2
+3. cd raw_data
+4. curl -O https://www.arabidopsis.org/download_files/Genes/TAIR10_genome_release/TAIR10_gff3/TAIR10_GFF3_genes.gff
+5. mv TAIR10_GFF3_genes.gff ATH10.gff3
+6. cat ATH10.gff3 | wc -l
+   The number of lines is 590264
+7. cat ATH10.gff3 | grep Chr2 > ../working_data/ATH10_Chr2.gff3
+8. tar -zcf ATH10.gff.tar.gz ATH10_Chr2.gff3
+9. export CAS1=bondarenko@cascades1.arc.vt.edu >> ~/.zshrc
+10. ssh $CAS1
+11. cd $WORK
+12. scp ./ATH10.gff.tar.gz $CAS1:/work/cascades/bondarenko/ATH10.gff.tar.gz
+
+==Install software and bash script (on CAS1)==
+1.  ssh $CAS1
+    cd ~
+    mkdir -p i2gds/RNAseq
+
+2.  cd i2gds/RNAseq
+    echo "mkdir scripts software data results" > script.bash
+
+3.  cd ~
+    mkdir bin
+
+4.  cd ~/i2gds/RNAseq
+    # Download STAR
+    wget https://github.com/alexdobin/STAR/archive/2.7.9a.tar.gz
+    # Download featureCount
+    wget https://sourceforge.net/projects/subread/files/subread-2.0.1/subread-2.0.1-Linux-x86_64.tar.gz
+    # Download Cufflinks
+    wget http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/cufflinks-2.2.1.Linux_x86_64.tar.gz
+
+5.  
