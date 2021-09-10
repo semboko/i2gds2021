@@ -30,5 +30,22 @@
     wget https://sourceforge.net/projects/subread/files/subread-2.0.1/subread-2.0.1-Linux-x86_64.tar.gz
     # Download Cufflinks
     wget http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/cufflinks-2.2.1.Linux_x86_64.tar.gz
+    # Download stringtie
+    wget https://github.com/gpertea/stringtie/releases/download/v2.1.7/stringtie-2.1.7.Linux_x86_64.tar.gz
 
-5.  
+5.  tar -xvf 2.7.9a.tar.gz
+    tar -xvf subread-2.0.1-Linux-x86_64.tar.gz
+    tar -xvf cufflinks-2.2.1.Linux_x86_64.tar.gz
+    tar -xvf stringtie-2.1.7.Linux_x86_64.tar.gz
+
+11. cp ./STAR-2.7.9a/bin/Linux_x86_64/STAR ~/bin
+
+12. ln -s ./subread-2.0.1-Linux-x86_64/bin/featureCounts ~/bin/featureCounts
+    ln -s ./cufflinks-2.2.1.Linux_x86_64/cufflinks ~/bin/cufflinks
+
+13. echo "export PATH=~/bin:$PATH >> .bash_profile"
+
+14. STAR is runnable. STAR version=2.7.9a
+    cufflinks and featureCounts are not
+
+15. ln -s $WORK/ATH.part.fa ~/i2gds/RNAseq/ATH.part.fa
