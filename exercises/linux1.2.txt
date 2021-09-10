@@ -40,12 +40,13 @@
 
 11. cp ./STAR-2.7.9a/bin/Linux_x86_64/STAR ~/bin
 
-12. ln -s ./subread-2.0.1-Linux-x86_64/bin/featureCounts ~/bin/featureCounts
-    ln -s ./cufflinks-2.2.1.Linux_x86_64/cufflinks ~/bin/cufflinks
+12. ln -s ~/i2gds/RNAseq/subread-2.0.1-Linux-x86_64/bin/featureCounts ~/bin/featureCounts
+    ln -s ~/i2gds/RNAseq/cufflinks-2.2.1.Linux_x86_64/cufflinks ~/bin/cufflinks
 
 13. echo "export PATH=~/bin:$PATH >> .bash_profile"
 
 14. STAR is runnable. STAR version=2.7.9a
-    cufflinks and featureCounts are not
+    cufflinks version v2.2.1
+    featureCounts version v2.0.1
 
 15. ln -s $WORK/ATH.part.fa ~/i2gds/RNAseq/ATH.part.fa
